@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Registration System</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>University Course Registration</h1>
+    
+    <!-- Role Selection -->
+    <div id="roleSelection">
+      <h2>Select Role</h2>
+      <button onclick="showStudentLogin()">Student</button>
+      <button onclick="showAdminLogin()">Admin</button>
+    </div>
+
+    <!-- Student Login -->
+    <div id="studentLogin" style="display: none;">
+      <h2>Student Login</h2>
+      <input type="text" id="studentRollNumber" placeholder="Enter Roll Number" />
+      <button onclick="studentLogin()">Login</button>
+    </div>
+
+    <!-- Student Dashboard -->
+    <div id="studentDashboard" style="display: none;">
+      <h2>Your Dashboard</h2>
+      <button onclick="studentLogout()">Logout</button>
+      
+      <!-- Weekly Calendar / Schedule -->
+      <div id="calendar"></div>
+      
+      <h3>Available Courses</h3>
+      <!-- Filtering Controls -->
+      <div id="filters">
+        <input type="text" id="filterDepartment" placeholder="Department" onkeyup="filterCourses()" />
+        <input type="text" id="filterLevel" placeholder="Course Level" onkeyup="filterCourses()" />
+        <input type="text" id="filterTime" placeholder="Time of Day" onkeyup="filterCourses()" />
+        <input type="text" id="filterDays" placeholder="Days" onkeyup="filterCourses()" />
+        <input type="number" id="filterOpenSeats" placeholder="Min Open Seats" onkeyup="filterCourses()" />
+      </div>
+      <!-- Course List -->
+      <div id="courseList"></div>
+    </div>
+
+    <!-- Admin Login -->
+    <div id="adminLogin" style="display: none;">
+      <h2>Admin Login</h2>
+      <input type="text" id="adminUsername" placeholder="Enter Username" />
+      <input type="password" id="adminPassword" placeholder="Enter Password" />
+      <button onclick="adminLogin()">Login</button>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" style="display: none;">
+      <h2>Admin Dashboard</h2>
+      <button onclick="adminLogout()">Logout</button>
+      
+      <h3>Manage Courses</h3>
+      <button onclick="addCourse()">Add Course</button>
+      <button onclick="viewCourses()">View All Courses</button>
+      <button onclick="updateCourse()">Update Course</button>
+      <button onclick="deleteCourse()">Delete Course</button>
+      <button onclick="setPrerequisites()">Set Prerequisites</button>
+      <button onclick="adjustSeats()">Adjust Seats</button>
+      
+      <h3>Manage Student Registrations</h3>
+      <button onclick="viewCourseRegistrations()">View Registrations for a Course</button>
+      <button onclick="viewAvailableCourses()">View Courses with Available Seats</button>
+      <button onclick="viewIncompletePrerequisites()">View Students with Incomplete Prerequisites</button>
+      
+      <h3>Manage Students</h3>
+      <button onclick="addStudent()">Add Student</button>
+      <button onclick="deleteStudent()">Delete Student</button>
+      <button onclick="overrideRegistration()">Override Registration</button>
+      <button onclick="viewAllStudents()">View All Students</button>
+
+    </div>
+  </div>
+
+<!-- JS Files -->
+<script src="js/app.js"></script>
+<script src="js/student.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

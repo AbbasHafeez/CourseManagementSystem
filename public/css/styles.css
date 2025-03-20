@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Container */
+.container {
+  width: 60%;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+  color: #2c3e50;
+}
+
+h2, h3 {
+  color: #3b5bdb;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #3b5bdb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #273c75;
+}
+
+/* Input Fields */
+input {
+  padding: 10px;
+  margin: 8px 0;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+  background: white;
+  color: #333;
+  outline: none;
+}
+
+/* Ensure inputs inside filters section are properly displayed */
+#filters input {
+  flex: 1;
+  max-width: 180px;
+  appearance: none;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#filters input:focus {
+  border-color: #3b5bdb;
+  box-shadow: 0 0 5px rgba(59, 91, 219, 0.5);
+}
+
+/* Dashboard & Card Styles */
+#studentDashboard, #adminDashboard {
+  text-align: center;
+  padding: 20px;
+  display: none;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin: 20px auto;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Course List */
+#courseList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.course-item {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px auto;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Logout Button */
+.logout-btn {
+  background-color: #e74c3c;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+  }
+
+  input {
+      width: 95%;
+  }
+
+  #filters input {
+      max-width: 100%;
+  }
+}
